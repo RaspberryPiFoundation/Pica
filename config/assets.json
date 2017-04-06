@@ -1,0 +1,20 @@
+{
+  "images": {
+    "source":    "./assets/images",
+    "dest_dir":  "./public/assets/images"
+  },
+  "javascripts": {
+    "source":    "./assets/javascripts",
+    "main":      "pica.js",
+    "dest_dir":  "./public/assets/javascripts",
+    "dest_file": "pica.js",
+    "min_file":  "pica.min.js"
+  },
+  "stylesheets": {
+    "source":    "./assets/stylesheets",
+    "main":      "pica.scss",
+    "dest_dir":  "./public/assets/stylesheets",
+    "dest_file": "pica.css",
+    "min_file":  "pica.min.css"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "source": "./public/assets/**/*",
+  "dest":   "./dist/"
+}
