@@ -1,0 +1,40 @@
+@import '../../../assets/stylesheets/settings';
+@import '../../../assets/stylesheets/tools';
+
+.sl-c-nav-list {
+  display:     none;
+  font-family: $font-family-serif;
+  margin:      0;
+  padding:     0;
+
+  @include respond-to('narrow') {
+    display: block;
+  }
+}
+
+.sl-c-nav-list__item {
+  color:      $blue;
+  display:    inline-block;
+  list-style: none;
+  margin:     0;
+  padding:    0;
+
+  &::after {
+    content: ' / ';
+    display: inline;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.sl-c-nav-list__link {
+  color:           $blue;
+  display:         inline-block;
+  text-decoration: none;
+}
+
+.sl-c-nav-list__link--current {
+  font-weight: bold;
+}
