@@ -1,0 +1,66 @@
+
+@mixin clearfix {
+  &::after {
+    clear:   both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin font-size($font-size) {
+  @include rem('font-size', $font-size);
+}
+
+@mixin line-height($font-size: $font-size-base, $line-height: $line-height-base) {
+  line-height: ceil($font-size / $line-height) * ($line-height / $font-size);
+}
+
+@mixin mq($measurement, $value) {
+  @media only screen and ($measurement: $value) {
+    @content;
+  }
+}
+
+//  Includes px value for fallback in browsers with no support for rem units
+@mixin rem($property, $value, $important: null) {
+  @if ($important != null) {
+    $important: !important;
+  }
+  @else {
+    $important: null;
+  }
+
+  @if ($value == 0) {
+    #{$property}: #{$value} $important;
+  }
+  @else {
+    #{$property}: round($value) + px $important;
+    #{$property}: ($value / $font-size-base) * 1rem $important;
+  }
+}
+
+@mixin respond-to($media) {
+  $measurement: 'max-width'   !default;
+  $value:       $break-narrow !default;
+
+  @if $media == 'tiny' {
+    $measurement: 'max-width';
+    $value:       $break-narrow;
+  }
+  @else if $media == 'narrow' {
+    $measurement: 'min-width';
+    $value:       $break-narrow;
+  }
+  @else if $media == 'regular' {
+    $measurement: 'min-width';
+    $value:       $break-regular;
+  }
+  @else if $media == 'wide' {
+    $measurement: 'min-width';
+    $value:       $break-wide;
+  }
+
+  @include mq($measurement, $value) {
+    @content;
+  }
+}

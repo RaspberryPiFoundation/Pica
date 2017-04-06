@@ -1,0 +1,8 @@
+// These styles try to follow the ITCSS philosophy for organising styles, by csswizrdry.com
+// http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731?page=1
+@import 'settings';
+@import 'tools';
+@import 'generic';
+@import 'elements';
+@import '../../components/**/*';
+@import 'utilities';
