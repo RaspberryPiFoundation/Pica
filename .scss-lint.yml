@@ -1,0 +1,19 @@
+linters:
+  ElsePlacement:
+    enabled: true
+    style: new_line
+
+  SelectorFormat:
+    convention: hyphenated_BEM
+
+  SpaceAfterComma:
+    enabled: true
+    style: at_least_one_space
+
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: aligned
+
+  SpaceAfterVariableColon:
+    enabled: false
+    style: at_least_one_space
