@@ -3,15 +3,16 @@ $font-family-sans-serif: 'Roboto',      sans-serif;
 $font-family-serif:      'Roboto Slab', serif;
 $font-family-mono:       'Roboto Mono', monospace;
 
-//	Font Weights
+// Font weights
 $font-weight-light:   100;
 $font-weight-base:    300;
 $font-weight-bold:    500;
 $font-weight-x-bold:  700;
 $font-weight-xx-bold: 900;
 
-//	Basic elements configuration
+// Font sizes
 $font-size-base:     18;
+$font-size-base-px:  #{$font-size-base}px;
 $font-size-xx-small: 10;
 $font-size-x-small:  12;
 $font-size-small:    14;
@@ -19,47 +20,47 @@ $font-size-large:    20;
 $font-size-x-large:  22;
 $font-size-xx-large: 30;
 
-//  Line heights
+// Line heights
 $line-height-base:     22;
-$line-height-xx-small: $line-height-base * 0.25;
-$line-height-x-small:  $line-height-base * 0.5;
-$line-height-small:    $line-height-base * 0.75;
+$line-height-xx-small: $line-height-base * .25;
+$line-height-x-small:  $line-height-base * .5;
+$line-height-small:    $line-height-base * .75;
 $line-height-large:    $line-height-base * 1.25;
 $line-height-x-large:  $line-height-base * 1.5;
 $line-height-xx-large: $line-height-base * 2;
 
 //  H1
-$font-size-h1:       48;
-$font-weight-h1:     $font-weight-bold;
-$line-height-h1:     48;
-$margin-bottom-h1:   30;
+$font-size-h1:     48;
+$font-weight-h1:   $font-weight-bold;
+$line-height-h1:   48;
+$margin-bottom-h1: 30;
 
 //  H2
-$font-size-h2:       32;
-$font-weight-h2:     $font-weight-bold;
-$line-height-h2:     40;
-$margin-bottom-h2:   18;
+$font-size-h2:     32;
+$font-weight-h2:   $font-weight-bold;
+$line-height-h2:   40;
+$margin-bottom-h2: 18;
 
 //  H3
-$font-size-h3:       24;
-$font-weight-h3:     $font-weight-bold;
-$line-height-h3:     30;
-$margin-bottom-h3:   20;
+$font-size-h3:     24;
+$font-weight-h3:   $font-weight-bold;
+$line-height-h3:   30;
+$margin-bottom-h3: 20;
 
 //  H4
-$font-size-h4:       18;
-$font-weight-h4:     $font-weight-x-bold;
-$line-height-h4:     24;
-$margin-bottom-h4:   16;
+$font-size-h4:     18;
+$font-weight-h4:   $font-weight-x-bold;
+$line-height-h4:   24;
+$margin-bottom-h4: 16;
 
 //  H5
-$font-size-h5:       14;
-$font-weight-h5:     $font-weight-x-bold;
-$line-height-h5:     17;
-$margin-bottom-h5:   14;
+$font-size-h5:     14;
+$font-weight-h5:   $font-weight-x-bold;
+$line-height-h5:   17;
+$margin-bottom-h5: 14;
 
 //  H6
-$font-size-h6:       14;
-$font-weight-h6:     $font-weight-bold;
-$line-height-h6:     17;
-$margin-bottom-h6:   14;
+$font-size-h6:     14;
+$font-weight-h6:   $font-weight-bold;
+$line-height-h6:   17;
+$margin-bottom-h6: 14;
