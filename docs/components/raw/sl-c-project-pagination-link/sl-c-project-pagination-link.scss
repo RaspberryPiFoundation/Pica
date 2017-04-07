@@ -1,0 +1,13 @@
+.sl-c-project-pagination__link {
+  background-color:    $sl-green;
+  background-position: center center;
+  background-repeat:   no-repeat;
+  background-size:     auto 30px;
+  border-radius:       100%;
+  display:             block;
+  height:              60px;
+  width:               60px;
+}
+
+.sl-c-project-pagination__link--left  { background-image: url('#{$images-path}/components/slash-learning-components/project-pagination/link--left.svg');  }
+.sl-c-project-pagination__link--right { background-image: url('#{$images-path}/components/slash-learning-components/project-pagination/link--right.svg'); }

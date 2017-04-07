@@ -1,0 +1,16 @@
+.sl-c-project-content {
+  background: $white;
+  padding:    20px 13px;
+
+  @include respond-to('medium') {
+    padding: 60px 100px;
+  }
+
+  @include respond-to('wide') {
+    border-color:  $sl-blue-light;
+    border-radius: 15px;
+    border-style:  solid;
+    border-width:  1px;
+    padding:       40px 50px;
+  }
+}
