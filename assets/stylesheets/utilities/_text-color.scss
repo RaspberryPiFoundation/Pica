@@ -1,0 +1,26 @@
+.u-color--black         { color: $black         !important; }
+.u-color--white         { color: $white         !important; }
+
+.u-color--grey          { color: $grey          !important; }
+.u-color--grey-dark     { color: $grey-dark     !important; }
+.u-color--grey-light    { color: $grey-light    !important; }
+.u-color--grey-x-light  { color: $grey-x-light  !important; }
+.u-color--grey-xx-light { color: $grey-xx-light !important; }
+
+.u-color--rpi-red       { color: $rpi-red       !important; }
+.u-color--rpi-green     { color: $rpi-green     !important; }
+
+//  Link color modifiers
+a {
+  .u-color--black &,         &.u-color--black         { color: $black         !important; }
+  .u-color--white &,         &.u-color--white         { color: $white         !important; }
+
+  .u-color--grey &,          &.u-color--grey          { color: $grey          !important; }
+  .u-color--grey-dark &,     &.u-color--grey-dark     { color: $grey-dark     !important; }
+  .u-color--grey-light &,    &.u-color--grey-light    { color: $grey-light    !important; }
+  .u-color--grey-x-light &,  &.u-color--grey-x-light  { color: $grey-x-light  !important; }
+  .u-color--grey-xx-light &, &.u-color--grey-xx-light { color: $grey-xx-light !important; }
+
+  .u-color--rpi-red &,       &.u-color--rpi-red       { color: $rpi-red       !important; }
+  .u-color--rpi-green &,     &.u-color--rpi-green     { color: $rpi-green     !important; }
+}
