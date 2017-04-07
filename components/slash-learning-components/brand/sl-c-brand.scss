@@ -1,3 +1,40 @@
-.sl-c-brand {}
-.sl-c-brand__logomark {}
-.sl-c-brand__appendix {}
+.sl-c-brand {
+  @include clearfix;
+  @include font-size($font-size-small);
+
+  color:           $sl-blue;
+  display:         inline-block;
+  font-family:     $font-family-serif;
+  line-height:     33px;
+  text-decoration: none;
+
+  @include respond-to('narrow') {
+    @include font-size($font-size-base);
+  }
+}
+
+.sl-c-brand__logomark {
+  display:        block;
+  float:          left;
+  height:         33px;
+  margin-right:   .5rem;
+  vertical-align: middle;
+  width:          26px;
+
+  @include respond-to('medium') {
+    height: 36px;
+    width:  29px;
+  }
+}
+
+.sl-c-brand__title {
+  display:     block;
+  float:       left;
+  font-weight: $font-weight-bold;
+}
+
+.sl-c-brand__appendix {
+  display:     block;
+  float:       left;
+  font-weight: $font-weight-bold;
+}
