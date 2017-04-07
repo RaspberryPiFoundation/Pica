@@ -1,4 +1,7 @@
 linters:
+  Comment:
+    enabled: false
+
   ElsePlacement:
     enabled: true
     style: new_line
