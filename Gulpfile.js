@@ -2,34 +2,21 @@
 
 'use strict'
 
-// Load Fractal
-const fractal       = require('@frctl/fractal').create()
-
-// Load generic node stuff
-// const exec          = require('child_process').exec
-// const fs            = require('fs');
-const logger        = fractal.cli.console
-// const reload        = require('require-reload')(require)
-
 // Load package.json as JSON object
-let pkg             = require('./package.json')
+let pkg            = require('./package.json')
 
 // Load Gulp and its dependencies
-const gulp          = require('gulp')
-const autoprefixer  = require('gulp-autoprefixer')
-const babel         = require('gulp-babel')
-// const bump          = require('gulp-bump')
-const cssnano       = require('gulp-cssnano')
-const header        = require('gulp-header')
-const imagemin      = require('gulp-imagemin')
-// const notify        = require('gulp-notify')
-// const plumber       = require('gulp-plumber')
-const rename        = require('gulp-rename')
-const sass          = require('gulp-sass')
-const sass_glob     = require('gulp-sass-glob')
-const sourcemaps    = require('gulp-sourcemaps')
-const uglify        = require('gulp-uglify')
-// const util          = require('gulp-util')
+const gulp         = require('gulp')
+const autoprefixer = require('gulp-autoprefixer')
+const babel        = require('gulp-babel')
+const cssnano      = require('gulp-cssnano')
+const header       = require('gulp-header')
+const imagemin     = require('gulp-imagemin')
+const rename       = require('gulp-rename')
+const sass         = require('gulp-sass')
+const sass_glob    = require('gulp-sass-glob')
+const sourcemaps   = require('gulp-sourcemaps')
+const uglify       = require('gulp-uglify')
 
 // Set banner template
 const banner = [
@@ -104,21 +91,6 @@ let process_main_stylesheet = () => {
     .pipe(gulp.dest(dest_dir))
 }
 
-let process_component_stylesheet = (event) => {
-  let file_path = event.path
-  let dest_dir  = file_path.match(/^(.*[\\\/])/)[0]
-
-  gulp.src(file_path)
-    .pipe(sass_glob())
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest(dest_dir))
-
-  return process_main_stylesheet()
-}
-
 gulp.task('images',      () => { return process_images()          })
 gulp.task('javascripts', () => { return process_javascripts()     })
 gulp.task('stylesheets', () => { return process_main_stylesheet() })
@@ -126,22 +98,12 @@ gulp.task('stylesheets', () => { return process_main_stylesheet() })
 gulp.task('all', ['images', 'javascripts', 'stylesheets'])
 
 gulp.task('watch', () => {
-  gulp.watch(assets_config.images.source      + '/**',        ['images'])
-  gulp.watch(assets_config.javascripts.source + '/**/*.js',   ['javascripts'])
-  gulp.watch(assets_config.stylesheets.source + '/**/*.scss', ['stylesheets'])
-  gulp.watch('./components/**/*.scss', (callback) => { return process_component_stylesheet(callback) })
-})
-
-gulp.task('fractal:start', () => {
-  const server = fractal.web.server({
-    sync: true
-  })
-
-  server.on('error', err => logger.error(err.message))
-
-  return server.start().then(() => {
-    logger.success(`Fractal server is now running at ${server.url}`)
-  })
+  gulp.watch(assets_config.images.source      + '/**',      ['images'])
+  gulp.watch(assets_config.javascripts.source + '/**/*.js', ['javascripts'])
+  gulp.watch([
+    assets_config.stylesheets.source + '/**/*.scss',
+    './components/**/*.scss'
+  ], ['stylesheets'])
 })
 
 gulp.task('default', ['all', 'watch'])
