@@ -1,2 +1,15 @@
-.sl-c-project-progress {}
-.sl-c-project-progress__bar {}
+.sl-c-project-progress {
+  background: $sl-blue;
+  display:    block;
+  height:     46px;
+
+  @include respond-to('narrow') {
+    height: 10px;
+  }
+}
+
+.sl-c-project-progress__bar {
+  background: $sl-blue-dark;
+  display:    block;
+  height:     100%;
+}
