@@ -1,3 +1,27 @@
-.sl-o-brand-header {}
-.sl-o-brand-header__home-link {}
-.sl-o-brand-header__nav {}
+.sl-o-brand-header {
+  @include clearfix;
+
+  background: $white;
+  padding:    6px 12px;
+
+  @include respond-to('medium') {
+    padding: 10px 26px 20px;
+  }
+
+  @include respond-to('wide') {
+    padding: 10px 40px;
+  }
+}
+
+.sl-o-brand-header__home-link {
+  float: left;
+}
+
+.sl-o-brand-header__nav-list {
+  display: none;
+
+  @include respond-to('narrow') {
+    display: block;
+    float:   right;
+  }
+}
