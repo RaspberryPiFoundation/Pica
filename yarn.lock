@@ -2454,6 +2454,13 @@ gulp-sass-glob@^1.0.8:
     slash "^1.0.0"
     through2 "^2.0.3"
 
+gulp-sass-import@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gulp-sass-import/-/gulp-sass-import-1.0.0.tgz#d8a92d82676a3474b6e8ad1f6c6fcb7f08723714"
+  dependencies:
+    gulp-util "^3.0.2"
+    through2 "^0.6.3"
+
 gulp-sass@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/gulp-sass/-/gulp-sass-2.3.2.tgz#82b7ab90fe902cdc34c04f180d92f2c34902dd52"
